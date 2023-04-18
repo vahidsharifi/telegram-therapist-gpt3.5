@@ -10,18 +10,19 @@ completion = openai.Completion()
 
 
 
-
+# prompt_text = [{"role": "system", "content": "You are a funny casino assisstant with taste of humor. Your name is Siroos. You just answer the questions related to casino."},
+#                    {"role": "user", "content": f"{question}"}]
 
 # initial_text = [{"role": "system", "content": "You are a casino cashier."}]
 # Creating the main gpt-interactive function
 def ask(question, chat_log=None):
-    prompt_text = [{"role": "system", "content": "You are a funny casino assisstant with taste of humor. Your name is Siroos. You just answer the questions related to casino."},
+    prompt_text = [{"role": "system", "content": "You are a master degree student at univesity and you want to write an academic paragraphs about what you are asked for."},
                    {"role": "user", "content": f"{question}"}]
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=prompt_text,
         temperature=0.9,
-        max_tokens=150,
+        max_tokens=1500,
         top_p=1,
         frequency_penalty=0,
         presence_penalty=0.6,
