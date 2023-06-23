@@ -38,4 +38,4 @@ def ask(question, chat_log=None):
 #         chat_log = session_prompt
 #     return f'{chat_log}{restart_sequence} {question}{start_sequence}{answer}'
 
-# 
+#  
